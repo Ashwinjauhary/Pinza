@@ -42,8 +42,29 @@ docker run -p 4000:4000 pingza
 
 The app will be available at `http://localhost:4000`.
 
+## Repository
+[https://github.com/Ashwinjauhary/Pinza](https://github.com/Ashwinjauhary/Pinza)
+
 ## Tech Stack
 - **Frontend**: React, TypeScript, TailwindCSS, Framer Motion
-- **Backend**: Node.js, Express, Socket.IO
+- **Backend**: Node.js, Express, Socket.IO, WebRTC
 - **Database**: SQLite (easy to swap for PostgreSQL)
-- **Files**: Local storage (easy to swap for S3)
+- **Deployment**: Docker, Docker Compose
+
+## Deployment Guide
+
+### Using Docker Compose (Recommended)
+You can bring up the entire stack with a single command:
+
+```bash
+docker compose up --build
+```
+> Note: If you have an older Docker version, use `docker-compose up --build`.
+
+### Manual Push to GitHub
+If you need to update the repository code manually:
+```bash
+git add .
+git commit -m "Your commit message"
+git push origin main
+```
