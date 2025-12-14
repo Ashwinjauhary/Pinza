@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  pingza:
+    build: .
+    ports:
+      - "8080:4000"
+    volumes:
+      - pingza_data:/app/data
+      - pingza_uploads:/app/uploads
+    environment:
+      - JWT_SECRET=change_this_to_something_secure_in_prod
+      - NODE_ENV=production
+
+volumes:
+  pingza_data:
+  pingza_uploads:
